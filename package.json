@@ -1,0 +1,22 @@
+{
+  "name": "shopme",
+  "version": "1.0.0",
+  "description": "First attempt at a fullStack eCommerce build using MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesonarnett/eCommerce--shopME.git"
+  },
+  "author": "jamesonarnett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesonarnett/eCommerce--shopME/issues"
+  },
+  "homepage": "https://github.com/jamesonarnett/eCommerce--shopME#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
