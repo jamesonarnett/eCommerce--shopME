@@ -10,3 +10,17 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
+
+// function AppWithCallbackAfterRender() {
+//   useEffect(() => {
+//     console.log('rendered');
+//   });
+
+//   return <App tab="home" />
+// }
+
+// const container = document.getElementById('root');
+// const root = ReactDOM.createRoot(container);
+// root.render(<AppWithCallbackAfterRender />);
+
+//what the fuck is this overly verbose bullshit? react 18????
