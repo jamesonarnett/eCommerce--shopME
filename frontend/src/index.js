@@ -6,9 +6,7 @@ import "./bootstrap.min.css";
 import "./index.css";
 import App from "./App";
 
-const container = document.getElementById("root");
-const root = ReactDOM.createRoot(container);
-root.render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
     <App />
   </Provider>
