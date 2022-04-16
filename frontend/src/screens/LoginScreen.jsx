@@ -26,7 +26,7 @@ const LoginScreen = ({ location, history }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(login(email, login));
+    dispatch(login(email, password));
   };
 
   return (
@@ -34,7 +34,6 @@ const LoginScreen = ({ location, history }) => {
       <h1>Sign In</h1>
       {error && <Message variant="danger">{error}</Message>}
       {loading && <Loader />}
-
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="email">
           <Form.Label>Email Address</Form.Label>
@@ -42,10 +41,7 @@ const LoginScreen = ({ location, history }) => {
             type="email"
             placeholder="Enter email"
             value={email}
-            onChange={(e) => {
-              console.log(e.target.value);
-              setEmail(e.target.value);
-            }}
+            onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
@@ -55,14 +51,11 @@ const LoginScreen = ({ location, history }) => {
             type="password"
             placeholder="Enter password"
             value={password}
-            onChange={(e) => {
-              console.log(e.target.value);
-              setPassword(e.target.value);
-            }}
+            onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
-        <Button className="my-3" type="submit" variant="primary">
+        <Button type="submit" variant="primary">
           Sign In
         </Button>
       </Form>
@@ -70,7 +63,7 @@ const LoginScreen = ({ location, history }) => {
       <Row className="py-3">
         <Col>
           New Customer?{" "}
-          <Link to={redirect ? `./register?redirect${redirect}` : "/register"}>
+          <Link to={redirect ? `/register?redirect=${redirect}` : "/register"}>
             Register
           </Link>
         </Col>
